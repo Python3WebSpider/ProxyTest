@@ -3,7 +3,7 @@ import requests
 proxy = '127.0.0.1:7890'
 proxies = {
     'http': 'http://' + proxy,
-    'https': 'https://' + proxy,
+    'https': 'http://' + proxy,
 }
 try:
     response = requests.get('https://httpbin.org/get', proxies=proxies)
